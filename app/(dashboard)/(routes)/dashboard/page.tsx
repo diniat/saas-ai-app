@@ -17,8 +17,16 @@ export default function HomePage() {
         <h2 className="text-2xl md:text-4xl font-bold text-center">
           Explore the power of AI
         </h2>
-        <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
+        <p className="text-muted-foreground font-light text-sm flex flex-col px-2 md:text-lg text-center">
           Chat with the smartest AI - Experience the power of AI
+          <span className="text-xs text-blue-700 px-6 pt-2">
+            Please refrain from purchasing the subscription with a real card,
+            since this is a test page.
+          </span>
+          <span className="text-xs text-blue-700 px-6 pt-4">
+            Favor abstenerse de realizar la compra de la suscripción con una
+            tarjeta real, debido a que esta es una página de prueba.
+          </span>
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
