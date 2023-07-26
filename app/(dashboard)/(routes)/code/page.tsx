@@ -5,7 +5,7 @@ import axios from "axios";
 import { Code } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-//import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
@@ -21,13 +21,13 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
-//import { useProModal } from "@/hooks/use-pro-modal";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 import { formSchema } from "./constants";
 
 const CodePage = () => {
   const router = useRouter();
-  //const proModal = useProModal();
+  const proModal = useProModal();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -53,11 +53,11 @@ const CodePage = () => {
       form.reset();
     } catch (error: any) {
       if (error?.response?.status === 403) {
-        //proModal.onOpen();
+        proModal.onOpen();
         console.log(error);
-      } /* else {
+      } else {
         toast.error("Something went wrong.");
-      } */
+      }
     } finally {
       router.refresh();
     }
