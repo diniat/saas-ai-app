@@ -63,6 +63,21 @@ const VideoPage = () => {
         iconColor="text-orange-700"
         bgColor="bg-orange-700/10"
       />
+      <div className="flex md:w-[70vw]">
+        <p className="flex flex-col">
+          <span className="text-xs text-blue-700 px-6 pl-8">
+            Vercel waiting time ranges between 10 to 15 seconds, and sometimes
+            the API can take longer to reply. So it is possible to get an error
+            on some requests since this is a demo page.
+          </span>
+          <span className="text-xs text-blue-700 pt-2 pb-4 px-6 pl-8">
+            El tiempo de espera de Vercel oscila entre 10 y 15 segundos y, a
+            veces, la API puede tardar más en responder. Por lo tanto, es
+            posible obtener un error en algunas solicitudes, ya que esta es una
+            página de demostración.
+          </span>
+        </p>
+      </div>
       <div className="px-4 lg:px-8">
         <Form {...form}>
           <form
