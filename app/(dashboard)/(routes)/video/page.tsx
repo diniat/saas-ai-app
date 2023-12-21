@@ -57,7 +57,7 @@ const VideoPage = () => {
   return (
     <div>
       <Heading
-        title="Video Generation"
+        title="Video Generation (Deprecated)"
         description="Turn your prompt into video."
         icon={FileAudio}
         iconColor="text-orange-700"

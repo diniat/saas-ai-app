@@ -39,13 +39,13 @@ const routes = [
     href: "/image",
   },
   {
-    label: "Video Generation",
+    label: "Video Generation (deprecated)",
     icon: VideoIcon,
     color: "text-orange-700",
     href: "/video",
   },
   {
-    label: "Music Generation",
+    label: "Music Generation (deprecated)",
     icon: Music,
     color: "text-emerald-500",
     href: "/music",
@@ -92,7 +92,10 @@ export const Sidebar = ({
                 "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition",
                 pathname === route.href
                   ? "text-white bg-white/10"
-                  : "text-zinc-400"
+                  : "text-zinc-400",
+                route.href === "/video" || route.href === "/music"
+                  ? "text-slate-700"
+                  : ""
               )}
             >
               <div className="flex items-center flex-1">
